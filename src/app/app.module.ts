@@ -14,6 +14,10 @@ import { AdminHomepageComponent } from './components/admin/admin-homepage/admin-
 import { AdminUpdatepageComponent } from './components/admin/admin-updatepage/admin-updatepage.component';
 import { AdminDetailpageComponent } from './components/admin/admin-detailpage/admin-detailpage.component';
 import { AdminAddpageComponent } from './components/admin/admin-addpage/admin-addpage.component';
+import { CustomerHomepageComponent } from './components/cutomer/customer-homepage/customer-homepage.component'
+import { CustomerBookingpageComponent } from './components/cutomer/customer-bookingpage/customer-bookingpage.component';
+import { CustomerPaymentpageComponent } from './components/cutomer/customer-paymentpage/customer-paymentpage.component';
+import { CustomerProfilepageComponent } from './components/cutomer/customer-profilepage/customer-profilepage.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { AdminAddpageComponent } from './components/admin/admin-addpage/admin-ad
     AdminHomepageComponent,
     AdminUpdatepageComponent,
     AdminDetailpageComponent,
-    AdminAddpageComponent
+    AdminAddpageComponent,
+    CustomerHomepageComponent,
+    CustomerBookingpageComponent,
+    CustomerPaymentpageComponent,
+    CustomerProfilepageComponent
   ],
   imports: [
     BrowserModule,
