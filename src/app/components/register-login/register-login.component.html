@@ -1,3 +1,36 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../../assets/hotelicon.jpg" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                EaseMyStay
+            </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <nav>
+                        <a class="nav-link" href="#" routerLink="" routerLinkActive="active">Home</a>
+                    </nav>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+<app-navbar-homepage></app-navbar-homepage>
+<!-- body -->
 <div class="body">
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
@@ -5,20 +38,41 @@
         <div class="signup">
             <form>
                 <label for="chk" aria-hidden="true">Sign up</label>
-                <input type="text" name="txt" placeholder="First Name" [(ngModel)]="signUpObj.firstName">
-                <input type="text" name="txt" placeholder="Last Name" [(ngModel)]="signUpObj.lastName">
-                <input type="text" name="txt" placeholder="Contact Number" [(ngModel)]="signUpObj.contact">
-                <input type="text" name="txt" placeholder="City" [(ngModel)]="signUpObj.city">
-                <input type="email" name="email" placeholder="Email" [(ngModel)]="signUpObj.email">
-                <input type="password" name="pswd" placeholder="Password" [(ngModel)]="signUpObj.password">
+                <div class="form-group">
+                    <input type="text" name="txt" class="form-control" placeholder="First Name"
+                        [(ngModel)]="signUpObj.firstName">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txt" class="form-control" placeholder="Last Name"
+                        [(ngModel)]="signUpObj.lastName">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txt" class="form-control" placeholder="Contact Number"
+                        [(ngModel)]="signUpObj.contact">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txt" class="form-control" placeholder="City" [(ngModel)]="signUpObj.city">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email"
+                        [(ngModel)]="signUpObj.email">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="pswd" class="form-control" placeholder="Password"
+                        [(ngModel)]="signUpObj.password">
+                </div>
                 <!-- <select name="roles" id="roles" [(ngModel)]="signUpObj.role">
                     <option value="User" selected>User</option>
                     <option value="Admin">Admin</option>
                 </select> -->
-                <select [(ngModel)]="signUpObj.role" class="form-select" aria-label="Default select example">
-                    <option value="Admin">Admin</option>
-                    <option value="User" selected>User</option>
-                </select>
+                <div class="form-group">
+                    <select [(ngModel)]="signUpObj.role" class="form-control chosen-select form-select"
+                        aria-label="Default select example">
+                        <option value="" disabled selected>Role</option>
+                        <option value="Admin">Admin</option>
+                        <option value="User" selected>User</option>
+                    </select>
+                </div>
                 <button (click)="onSignUp()">Sign up</button>
             </form>
         </div>
@@ -26,10 +80,15 @@
         <div class="login">
             <form>
                 <label for="chk" aria-hidden="true">Login</label>
-                <input type="email" name="email" placeholder="Email" [(ngModel)]="loginObj.email">
-                <input type="password" name="pswd" placeholder="Password" [(ngModel)]="loginObj.password">
+                <div class="form-group">
+                    <input type="email" name="email"  class="form-control" placeholder="Email" [(ngModel)]="loginObj.email">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="pswd"  class="form-control"  placeholder="Password" [(ngModel)]="loginObj.password">
+                </div>
                 <button (click)="onLogin()">Login</button>
             </form>
         </div>
     </div>
 </div>
+<app-footer></app-footer>
