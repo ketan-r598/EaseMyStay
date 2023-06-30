@@ -1,0 +1,35 @@
+<div class="body">
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="First Name" [(ngModel)]="signUpObj.firstName">
+                <input type="text" name="txt" placeholder="Last Name" [(ngModel)]="signUpObj.lastName">
+                <input type="text" name="txt" placeholder="Contact Number" [(ngModel)]="signUpObj.contact">
+                <input type="text" name="txt" placeholder="City" [(ngModel)]="signUpObj.city">
+                <input type="email" name="email" placeholder="Email" [(ngModel)]="signUpObj.email">
+                <input type="password" name="pswd" placeholder="Password" [(ngModel)]="signUpObj.password">
+                <!-- <select name="roles" id="roles" [(ngModel)]="signUpObj.role">
+                    <option value="User" selected>User</option>
+                    <option value="Admin">Admin</option>
+                </select> -->
+                <select [(ngModel)]="signUpObj.role" class="form-select" aria-label="Default select example">
+                    <option value="Admin">Admin</option>
+                    <option value="User" selected>User</option>
+                </select>
+                <button (click)="onSignUp()">Sign up</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" [(ngModel)]="loginObj.email">
+                <input type="password" name="pswd" placeholder="Password" [(ngModel)]="loginObj.password">
+                <button (click)="onLogin()">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
