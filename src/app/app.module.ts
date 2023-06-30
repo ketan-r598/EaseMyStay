@@ -10,6 +10,10 @@ import { NavbarHomepageComponent } from './navbar/navbar-homepage/navbar-homepag
 import { NavbarCustomerComponent } from './navbar/navbar-customer/navbar-customer.component';
 import { NavbarAdminComponent } from './navbar/navbar-admin/navbar-admin.component';
 import { RegisterLoginComponent } from './components/register-login/register-login.component';
+import { AdminHomepageComponent } from './components/admin/admin-homepage/admin-homepage.component';
+import { AdminUpdatepageComponent } from './components/admin/admin-updatepage/admin-updatepage.component';
+import { AdminDetailpageComponent } from './components/admin/admin-detailpage/admin-detailpage.component';
+import { AdminAddpageComponent } from './components/admin/admin-addpage/admin-addpage.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { RegisterLoginComponent } from './components/register-login/register-log
     NavbarHomepageComponent,
     NavbarCustomerComponent,
     NavbarAdminComponent,
-    RegisterLoginComponent
+    RegisterLoginComponent,
+    AdminHomepageComponent,
+    AdminUpdatepageComponent,
+    AdminDetailpageComponent,
+    AdminAddpageComponent
   ],
   imports: [
     BrowserModule,
