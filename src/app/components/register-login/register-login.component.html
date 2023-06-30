@@ -28,9 +28,13 @@
     </div>
 </nav> -->
 
-
+<!-- navbar -->
 <app-navbar-homepage></app-navbar-homepage>
+
+
 <!-- body -->
+
+<!-- SignUp Form -->
 <div class="body">
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
@@ -77,18 +81,23 @@
             </form>
         </div>
 
+        <!-- Login Form -->
         <div class="login">
             <form>
                 <label for="chk" aria-hidden="true">Login</label>
                 <div class="form-group">
-                    <input type="email" name="email"  class="form-control" placeholder="Email" [(ngModel)]="loginObj.email">
+                    <input type="email" name="email" class="form-control" placeholder="Email"
+                        [(ngModel)]="loginObj.email">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="pswd"  class="form-control"  placeholder="Password" [(ngModel)]="loginObj.password">
+                    <input type="password" name="pswd" class="form-control" placeholder="Password"
+                        [(ngModel)]="loginObj.password">
                 </div>
                 <button (click)="onLogin()">Login</button>
             </form>
         </div>
     </div>
 </div>
+
+<!-- Footer -->
 <app-footer></app-footer>
