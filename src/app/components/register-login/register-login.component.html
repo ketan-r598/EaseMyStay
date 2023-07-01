@@ -43,34 +43,34 @@
             <form>
                 <label for="chk" aria-hidden="true">Sign up</label>
                 <div class="form-group">
-                    <input type="text" name="txt" class="form-control" placeholder="First Name"
-                        [(ngModel)]="signUpObj.firstName">
+                    <input type="text" id="firstName" class="form-control" placeholder="First Name"
+                        [(ngModel)]="userRegister.firstName" name="firstName">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="txt" class="form-control" placeholder="Last Name"
-                        [(ngModel)]="signUpObj.lastName">
+                    <input type="text" id="lastName" class="form-control" placeholder="Last Name"
+                        [(ngModel)]="userRegister.lastName" name="lastName">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="txt" class="form-control" placeholder="Contact Number"
-                        [(ngModel)]="signUpObj.contact">
+                    <input type="text" id="contactNumber" class="form-control" placeholder="Contact Number"
+                        [(ngModel)]="userRegister.contactNumber" name="contactNumber">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="txt" class="form-control" placeholder="City" [(ngModel)]="signUpObj.city">
+                    <input type="text" id="address" class="form-control" placeholder="City" [(ngModel)]="userRegister.address" name="address">
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email"
-                        [(ngModel)]="signUpObj.email">
+                    <input type="email" class="form-control" placeholder="Email"
+                        [(ngModel)]="userRegister.email" name="email">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="pswd" class="form-control" placeholder="Password"
-                        [(ngModel)]="signUpObj.password">
+                    <input type="password"  class="form-control" placeholder="Password"
+                        [(ngModel)]="userRegister.password" name="password">
                 </div>
                 <!-- <select name="roles" id="roles" [(ngModel)]="signUpObj.role">
                     <option value="User" selected>User</option>
                     <option value="Admin">Admin</option>
                 </select> -->
                 <div class="form-group">
-                    <select [(ngModel)]="signUpObj.role" class="form-control chosen-select form-select"
+                    <select [(ngModel)]="userRegister.role" class="form-control chosen-select form-select"
                         aria-label="Default select example">
                         <option value="" disabled selected>Role</option>
                         <option value="Admin">Admin</option>
@@ -86,12 +86,12 @@
             <form>
                 <label for="chk" aria-hidden="true">Login</label>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email"
-                        [(ngModel)]="loginObj.email">
+                    <input type="email" class="form-control" placeholder="Email"
+                        [(ngModel)]="userLogin.email" name="email">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="pswd" class="form-control" placeholder="Password"
-                        [(ngModel)]="loginObj.password">
+                    <input type="password" id="password" class="form-control" placeholder="Password"
+                        [(ngModel)]="userLogin.password" name="password">
                 </div>
                 <button (click)="onLogin()">Login</button>
             </form>
