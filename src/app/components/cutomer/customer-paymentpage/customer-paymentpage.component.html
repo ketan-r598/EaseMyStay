@@ -1,1 +1,55 @@
-<p>customer-paymentpage works!</p>
+<app-navbar-customer></app-navbar-customer>
+
+<div class="container-fluid mt-0 mb-0 py-1 mx-auto pb-0" id="form" >
+    <div class="row d-flex justify-content-center mb-0">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center mb-0">
+            <h3 id="heading">Booking Confirmation and Payment</h3>
+            <!-- <p class="blue-text">Just answer a few questions<br> so that we can personalize the right experience for you.</p> -->
+            <div class="card">
+                <!-- <h5 class="text-center mb-4">Powering world-class companies</h5> -->
+                <form class="form-card">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex" > <label
+                                class="form-control-label px-3">Date<span class="text-danger"> *</span></label>
+                            <input type="date" id="date" class="form-control" name="date" value="todays date" readonly
+                                onblur="validate(1)">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Hotel Name<span class="text-danger"> *</span></label> <input
+                                type="text" id="hname" name="hname" class="form-control" value="Particular hotel" readonly onblur="validate(2)">
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Guests<span class="text-danger"> *</span></label> <input
+                                type="number" id="guests" name="guests" class="form-control" value="2" readonly  onblur="validate(3)">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Rooms<span class="text-danger"> *</span></label>
+                            <input type="number" id="rooms" class="form-control" name="rooms" value="1" readonly
+                                onblur="validate(4)">
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Amount<span class="text-danger"> *</span></label> <input
+                                type="number" id="amount" name="amount" class="form-control" value="2000" readonly
+                                onblur="validate(5)"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Mode of Payment<span class="text-danger"> *</span></label>
+                            <input type="text" id="contact" class="form-control" name="contact" placeholder="Enter your Contact Number"
+                                onblur="validate(5)">
+                        </div>
+                    </div>
+
+                    
+                    <div class="row justify-content-end text-center">
+                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Pay and Book Hotel</button> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

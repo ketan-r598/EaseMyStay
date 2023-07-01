@@ -18,6 +18,9 @@ import { CustomerHomepageComponent } from './components/cutomer/customer-homepag
 import { CustomerBookingpageComponent } from './components/cutomer/customer-bookingpage/customer-bookingpage.component';
 import { CustomerPaymentpageComponent } from './components/cutomer/customer-paymentpage/customer-paymentpage.component';
 import { CustomerProfilepageComponent } from './components/cutomer/customer-profilepage/customer-profilepage.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +38,15 @@ import { CustomerProfilepageComponent } from './components/cutomer/customer-prof
     CustomerHomepageComponent,
     CustomerBookingpageComponent,
     CustomerPaymentpageComponent,
-    CustomerProfilepageComponent
+    CustomerProfilepageComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

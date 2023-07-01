@@ -1,1 +1,51 @@
-<p>customer-profilepage works!</p>
+<app-navbar-customer></app-navbar-customer>
+
+<div class="container-fluid mt-0 mb-0 py-1 mx-auto pb-0" id="form" >
+    <div class="row d-flex justify-content-center mb-0">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center mb-0">
+            <h3 id="heading">Edit your Profile</h3>
+            <!-- <p class="blue-text">Just answer a few questions<br> so that we can personalize the right experience for you.</p> -->
+            <div class="card">
+                <!-- <h5 class="text-center mb-4">Powering world-class companies</h5> -->
+                <form class="form-card">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex" > <label
+                                class="form-control-label px-3">First Name<span class="text-danger"> *</span></label>
+                            <input type="text" id="fname" class="form-control" name="fname" value="Rakshith"
+                                onblur="validate(1)">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Last Name<span class="text-danger"> *</span></label> <input
+                                type="text" id="lname" name="lname" class="form-control" value="Kumar" onblur="validate(2)">
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input
+                                type="email" id="email" name="email" class="form-control" value="Rakshith@gmail.com" onblur="validate(3)">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Contact<span class="text-danger"> *</span></label>
+                            <input type="text" id="contact" class="form-control" name="contact" value="+91 9148929292" 
+                                onblur="validate(4)">
+                        </div>
+                    </div>
+                    
+
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"> <label
+                                class="form-control-label px-3">Address<span class="text-danger"> *</span></label>
+                            <input type="text" id="address" class="form-control" name="address" value="Gundlupet"
+                                onblur="validate(6)">
+                        </div>
+                    </div>
+                    <div class="row justify-content-end text-center">
+                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Update Profile</button> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
