@@ -19,8 +19,8 @@ import { CustomerBookingpageComponent } from './components/cutomer/customer-book
 import { CustomerPaymentpageComponent } from './components/cutomer/customer-paymentpage/customer-paymentpage.component';
 import { CustomerProfilepageComponent } from './components/cutomer/customer-profilepage/customer-profilepage.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [

@@ -2,22 +2,23 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterLoginComponent } from './components/register-login/register-login.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { AdminHomepageComponent } from './components/admin/admin-homepage/admin-homepage.component';
-import { AdminAddpageComponent } from './components/admin/admin-addpage/admin-addpage.component';
-import { AdminUpdatepageComponent } from './components/admin/admin-updatepage/admin-updatepage.component';
-import { AdminDetailpageComponent } from './components/admin/admin-detailpage/admin-detailpage.component';
-import { CustomerHomepageComponent } from './components/cutomer/customer-homepage/customer-homepage.component';
-import { CustomerBookingpageComponent } from './components/cutomer/customer-bookingpage/customer-bookingpage.component';
-import { CustomerProfilepageComponent } from './components/cutomer/customer-profilepage/customer-profilepage.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
     path: "registerLogin",
     component: RegisterLoginComponent
   },
-
+  
+  {
+    path: "register",
+    component: RegisterComponent
+  },
+  
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  
   {
     path: "",
     redirectTo:'home',
@@ -80,6 +81,16 @@ const routes: Routes = [
     component:LoginComponent
   }
 
+  {
+    path: "customer/home",
+    component : CustomerHomepageComponent
+  },
+
+  {
+    path: "admin/home",
+    component: AdminHomepageComponent
+  },
+  
 ];
 
 @NgModule({
