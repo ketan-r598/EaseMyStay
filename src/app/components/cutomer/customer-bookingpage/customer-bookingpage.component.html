@@ -4,44 +4,43 @@
     <div class="row d-flex justify-content-center mb-0">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center mb-0">
             <h3 id="heading">Enter details to book your hotel</h3>
-            <!-- <p class="blue-text">Just answer a few questions<br> so that we can personalize the right experience for you.</p> -->
             <div class="card">
-                <!-- <h5 class="text-center mb-4">Powering world-class companies</h5> -->
-                <form class="form-card">
+                <form class="form-card" (ngSubmit)="onSubmit()">
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Check In Date<span class="text-danger"> *</span></label>
-                            <input type="datetime-local" id="checkInDate" class="form-control" name="checkInDate" required
-                                onblur="validate(1)">
+                            <input type="datetime-local" id="checkInDate" class="form-control" name="checkInDate"
+                                required [(ngModel)]="checkInDate">
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Check Out Date<span class="text-danger">
                                     *</span></label> <input type="datetime-local" id="checkOutDate" name="checkOutDate"
-                                class="form-control" required onblur="validate(2)">
+                                class="form-control" required [(ngModel)]="checkOutDate">
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Guests<span class="text-danger"> *</span></label> <input
-                                type="number" id="guests" name="guests" class="form-control" value="2" min="1" max="12"
-                                required onblur="validate(3)">
+                                type="number" id="numberOfGuests" name="numberOfGuests" class="form-control" value="2" min="1" max="12"
+                                required [(ngModel)]="booking.numberOfGuests">
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Rooms<span class="text-danger"> *</span></label>
-                            <input type="number" id="rooms" class="form-control" name="rooms" value="1" min="1" max="6"
-                                required onblur="validate(4)">
+                            <input type="number" id="numberOfRooms" class="form-control" name="numberOfRooms" value="1" min="1" max="6"
+                                required [(ngModel)]="booking.numberOfRooms">
                         </div>
                     </div>
 
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-12 flex-column d-flex"> <label
                                 class="form-control-label px-3">Amount<span class="text-danger"> *</span></label>
-                            <input type="text" id="amount" class="form-control" name="amount"
-                                value="2000" readonly onblur="validate(6)">
+                            <input type="text" id="amount" class="form-control" name="amount" value="2000" readonly [(ngModel)]="booking.amount">
                         </div>
                     </div>
                     <div class="row justify-content-end text-center">
-                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Proceed to Pay</button> </div>
+                        <div class="form-group col-sm-6">
+                            <button type="submit" class="btn-block btn-primary">Proceed to Pay</button>
+                        </div>
                     </div>
                 </form>
             </div>

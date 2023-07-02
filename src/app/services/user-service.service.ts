@@ -28,7 +28,7 @@ export class UserService {
 
   // Needs to be Changed
   getUserById(id:number): Observable<UserModel> {
-    return this.httpClient.get<UserModel>(`${this.baseURL}/${id}`);
+    return this.httpClient.get<UserModel>(`${this.baseURL}/getUser/${id}`);
   }
 
   deleteUser() : Observable<Object> {

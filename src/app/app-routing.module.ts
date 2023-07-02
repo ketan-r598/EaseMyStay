@@ -11,6 +11,7 @@ import { CustomerHomepageComponent } from './components/cutomer/customer-homepag
 import { CustomerProfilepageComponent } from './components/cutomer/customer-profilepage/customer-profilepage.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CustomerPaymentpageComponent } from './components/cutomer/customer-paymentpage/customer-paymentpage.component';
 
 const routes: Routes = [
   {
@@ -61,7 +62,7 @@ const routes: Routes = [
     component:CustomerHomepageComponent
   },
   {
-    path:"customer/booking",
+    path:"customer/booking/:hotelId",
     component:CustomerBookingpageComponent
   },
   {
@@ -69,8 +70,8 @@ const routes: Routes = [
     component:CustomerProfilepageComponent
   },
   {
-    path:"customer/payment",
-    component:CustomerHomepageComponent
+    path:"customer/payment/:hotelId/:bookingId",
+    component:CustomerPaymentpageComponent
   },
   // {
   //   path:"forbidden",

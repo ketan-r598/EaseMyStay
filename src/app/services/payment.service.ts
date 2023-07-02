@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Payment } from '../models/payment';
+import { SharedService } from './shared.service'
 
 
 @Injectable({
@@ -9,16 +10,32 @@ import { Payment } from '../models/payment';
 })
 export class PaymentService {
 
-  private baseURL = "http://localhost:8800/payments/customer";
+  private baseURL = "http://localhost:9940/payments/customer";
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(
+    private httpClient: HttpClient,
+    private sharedService: SharedService
+  ) { }
 
-  addPayment(payment:Payment) : Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}/add`,payment);
+  requestHeader = new HttpHeaders(
+    {
+      Authorization: `Bearer ${this.sharedService.getToken()}`
+    }
+  )
+
+  addPayment(payment: Payment): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL}/add`, payment, { headers: this.requestHeader });
   }
 
-  deletePayment(payment:Payment) : Observable<Object>{
-    return this.httpClient.delete(`${this.baseURL}/delete`);
+  deletePayment(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/delete/${id}`, { headers: this.requestHeader });
   }
 
+  getPayment(id: number): Observable<Object> {
+    return this.httpClient.get(`${this.baseURL}/getPayment/${id}`, { headers: this.requestHeader });
+  }
+
+  getPaymentByUserId(userId: number): Observable<Object> {
+    return this.httpClient.get(`${this.baseURL}/getPaymentByUserId/${userId}`, { headers: this.requestHeader });
+  }
 }

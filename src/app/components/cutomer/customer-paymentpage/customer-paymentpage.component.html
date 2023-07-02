@@ -1,50 +1,49 @@
 <app-navbar-customer></app-navbar-customer>
 
-<div class="container-fluid mt-0 mb-0 py-1 mx-auto pb-0" id="form" >
+<div class="container-fluid mt-0 mb-0 py-1 mx-auto pb-0" id="form">
     <div class="row d-flex justify-content-center mb-0">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center mb-0">
             <h3 id="heading">Booking Confirmation and Payment</h3>
-            <!-- <p class="blue-text">Just answer a few questions<br> so that we can personalize the right experience for you.</p> -->
             <div class="card">
-                <!-- <h5 class="text-center mb-4">Powering world-class companies</h5> -->
-                <form class="form-card">
+                <form class="form-card" (ngSubmit)="onSubmit()">
                     <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex" > <label
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Payment Date<span class="text-danger"> *</span></label>
-                            <input type="date" id="paymentDate" class="form-control" name="paymentDate" value="todays date" readonly
-                                onblur="validate(1)">
+                            <input type="text" id="paymentDate" class="form-control" name="paymentDate"
+                                [value]="payment.paymentDate" readonly>
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
-                                class="form-control-label px-3">Hotel Name<span class="text-danger"> *</span></label> <input
-                                type="text" id="hotelName" name="hotelName" class="form-control" value="Particular hotel" readonly onblur="validate(2)">
+                                class="form-control-label px-3">Hotel Name<span class="text-danger"> *</span></label>
+                            <input type="text" id="hotelName" name="hotelName" class="form-control"
+                                [value]="hotelName" readonly>
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Guests<span class="text-danger"> *</span></label> <input
-                                type="number" id="guests" name="guests" class="form-control" value="2" readonly  onblur="validate(3)">
+                                type="number" id="guests" name="guests" class="form-control" [value]="booking.numberOfGuests" readonly>
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Rooms<span class="text-danger"> *</span></label>
-                            <input type="number" id="rooms" class="form-control" name="rooms" value="1" readonly
-                                onblur="validate(4)">
+                            <input type="number" id="rooms" class="form-control" name="rooms" [value]="booking.numberOfRooms" readonly>
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Amount<span class="text-danger"> *</span></label> <input
-                                type="number" id="amount" name="amount" class="form-control" value="2000" readonly
-                                onblur="validate(5)"> </div>
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label
-                                class="form-control-label px-3">Mode of Payment<span class="text-danger"> *</span></label>
-                            <input type="text" id="paymentStatus" class="form-control" name="paymentStatus" placeholder="Enter your Contact Number"
-                                onblur="validate(5)">
+                                type="number" id="amount" name="amount" class="form-control" [value]="booking.amount" readonly>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Mode
+                                of Payment<span class="text-danger"> *</span></label>
+                            <input type="text" id="paymentMethod" class="form-control" name="paymentMethod"
+                                placeholder="" value="UPI" [(ngModel)]="payment.paymentMethod">
                         </div>
                     </div>
 
-                    
+
                     <div class="row justify-content-end text-center">
-                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Pay and Book Hotel</button> </div>
+                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Pay and
+                                Book Hotel</button> </div>
                     </div>
                 </form>
             </div>

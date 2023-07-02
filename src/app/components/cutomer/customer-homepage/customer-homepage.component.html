@@ -4,10 +4,10 @@
 <!-- search icon -->
 <div class="body">
     <div class="search-container">
-        <input type="text" name="search" placeholder="Search for hotels by city" class="search-input">
-        <a href="#" class="search-btn">
+        <input type="text" name="search" placeholder="Search for hotels by city" class="search-input" [(ngModel)]="city">
+        <button href="#" class="search-btn" (click)="search()">
             <i class="fas fa-search"></i>
-        </a>
+        </button>
     </div>
 </div>
 
@@ -20,10 +20,10 @@
                 </h5>
                 <p class="card-text">{{h.city + "," + h.email}}</p> 
                 
-                <a class="navbar-brand mx-1" href="#" routerLink="/customer/booking" routerLinkActive="active">
+                <button class="navbar-brand mx-1" href="#"  routerLinkActive="active" (click)="book(h.hotelId)">
                     <img src="../../../../assets/bookhotel.jpg" alt="Logo" width="30" height="24"
                         class="d-inline-block align-text-top"> Book Hotel
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -37,11 +37,11 @@
     <div class="row g-0">
         <div class="col-sm-4 text-bg-secondary d-inline-block" *ngFor="let b of bookings">
             <div class="card-body ">
-                <h5 class="card-title">{{b.hotelName}}
+                <h5 class="card-title">{{hotelName}}
                 </h5>
                 <p class="card-text">{{"Check In: " + b.checkInDate}}</p> 
                 <p class="card-text">{{"Check Out: " + b.checkOutDate}}</p>
-                <p class="card-text">{{"Status: " + b.bookingStatus}}</p>
+                <p class="card-text">{{"Status: " + " Confirmed"}}</p>
             </div>
         </div>
     </div>
