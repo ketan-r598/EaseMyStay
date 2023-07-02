@@ -1,57 +1,59 @@
 <app-navbar-admin></app-navbar-admin>
 
-<div class="container-fluid mt-0 mb-0 py-1 mx-auto pb-0" id="form" >
+<div class="container-fluid mt-0 mb-0 py-1 mx-auto pb-0" id="form">
     <div class="row d-flex justify-content-center mb-0">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center mb-0">
             <h3 id="heading">Add your Hotel</h3>
-            <!-- <p class="blue-text">Just answer a few questions<br> so that we can personalize the right experience for you.</p> -->
             <div class="card">
-                <!-- <h5 class="text-center mb-4">Powering world-class companies</h5> -->
-                <form class="form-card">
+                <form class="form-card" (ngSubmit)="onSubmit()">
                     <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex" > <label
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Hotel Name<span class="text-danger"> *</span></label>
-                            <input type="text" id="hname" class="form-control" name="hname" placeholder="Enter your Hotel Name"
-                                onblur="validate(1)">
+                            <input type="text" id="hotelName" class="form-control" name="hotelName"
+                                [(ngModel)]="hotel.hotelName" placeholder="Enter your Hotel Name">
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">City<span class="text-danger"> *</span></label> <input
-                                type="text" id="cname" name="cname" class="form-control" placeholder="Enter the City" onblur="validate(2)">
+                                type="text" id="city" name="city" class="form-control" placeholder="Enter the City"
+                                [(ngModel)]="hotel.city">
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">State<span class="text-danger"> *</span></label> <input
-                                type="text" id="state" name="state" class="form-control" placeholder="Enter State" onblur="validate(3)">
+                                type="text" id="state" name="state" class="form-control" placeholder="Enter State"
+                                [(ngModel)]="hotel.state">
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Country<span class="text-danger"> *</span></label>
-                            <input type="text" id="country" class="form-control" name="country" placeholder="Enter Country"
-                                onblur="validate(4)">
+                            <input type="text" id="country" class="form-control" name="country"
+                                [(ngModel)]="hotel.country" placeholder="Enter Country">
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input
                                 type="email" id="email" name="email" class="form-control" placeholder="Enter your email"
-                                onblur="validate(5)"> </div>
+                                [(ngModel)]="hotel.email"> </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Contact<span class="text-danger"> *</span></label>
-                            <input type="text" id="contact" class="form-control" name="contact" placeholder="Enter your Contact Number"
-                                onblur="validate(5)">
+                            <input type="text" id="contactInfo" class="form-control" name="contactInfo"
+                                [(ngModel)]="hotel.contactInfo" placeholder="Enter your Contact Number"
+                                >
                         </div>
                     </div>
 
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-12 flex-column d-flex"> <label
                                 class="form-control-label px-3">Address<span class="text-danger"> *</span></label>
-                            <input type="text" id="address" class="form-control" name="address" placeholder="Enter your Address"
-                                onblur="validate(6)">
+                            <input type="text" id="address" class="form-control" name="address"
+                                [(ngModel)]="hotel.address" placeholder="Enter your Address">
                         </div>
                     </div>
                     <div class="row justify-content-end text-center">
-                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Add
-                                Hotel</button> </div>
+                        <div class="form-group col-sm-6"> 
+                            <button class="btn-block btn-primary" type="submit">AddHotel</button>
+                         </div>
                     </div>
                 </form>
             </div>

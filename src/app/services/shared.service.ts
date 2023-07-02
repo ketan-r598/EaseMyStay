@@ -12,6 +12,7 @@ export class SharedService {
   }
 
   public setToken(token: string) {
+    // console.log(tok)
     localStorage.setItem("token", token);
   }
 
@@ -33,8 +34,11 @@ export class SharedService {
     return JSON.parse(localStorage.getItem("role") || '{}');
   }
 
-  public getToken(): string {
-    return JSON.parse(localStorage.getItem("token") || '{}');
+  public getToken() {
+    // return JSON.parse(localStorage.getItem("token") || '{}');
+    const token = localStorage.getItem("token");
+    console.log(JSON.stringify(token));
+    return JSON.stringify(token);
   }
 
   public getId(): number {

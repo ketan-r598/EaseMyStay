@@ -49,11 +49,11 @@ const routes: Routes = [
     component:AdminAddpageComponent
   },
   {
-    path:"admin/edithotel",
+    path:"admin/edithotel/:id",
     component:AdminUpdatepageComponent
   },
   {
-    path:"admin/hoteldetail",
+    path:"admin/hoteldetail/:id",
     component:AdminDetailpageComponent
   },
   {

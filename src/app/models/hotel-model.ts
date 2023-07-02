@@ -1,5 +1,4 @@
 export class HotelModel {
-    hotelId:number=0;
     hotelName:string='';
     userId:number=0;
     address:string='';

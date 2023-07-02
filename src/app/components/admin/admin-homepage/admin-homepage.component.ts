@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { HotelServiceService } from 'src/app/services/hotel-service.service';
+import { HotelModel } from 'src/app/models/hotel-model';
+import { Router } from '@angular/router';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-admin-homepage',
@@ -6,25 +10,51 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-homepage.component.css']
 })
 export class AdminHomepageComponent {
-  hotel:any;
-ngOnInit(): void {
-  this.hotel = [{
-    "id":1,
-    "hotelName":"ABC",
-    "city":"Mumbai",
-    "email":"hotel@abc.in"
-  },
- { 
-  "id":2,
-  "hotelName":"MNO",
-  "city":"Mysore",
-  "email":"hotel@mno.in"
-},
-{
-  "id":3,
-  "hotelName":"XYZ",
-  "city":"Bengaluru",
-  "email":"hotel@xyz.in"
-}];
-}
+
+  hotels: any;
+  // hotel: HotelModel = new HotelModel();
+
+  constructor(
+    private hotelService: HotelServiceService,
+    private router: Router,
+    private sharedService: SharedService
+  ) { }
+
+  ngOnInit(): void {
+
+    this.getHotels();
+  }
+
+  private getHotels() {
+    this.hotelService.getHotelByUserId(this.sharedService.getId()).subscribe(
+      (data: any) => {
+        console.log(data);
+        this.hotels=data;
+      },
+
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
+  getHotelDetail(id: number) {
+    this.router.navigate(['admin/hoteldetail', id]);
+  }
+
+  updateHotelDetails(id: number) {
+    this.router.navigate(['/admin/edithotel', id]);
+  }
+
+  deleteHotel(id: number) {
+    this.hotelService.deleteHotel(id).subscribe(
+      data => {
+        console.log(data);
+        this.getHotels();
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
 }
