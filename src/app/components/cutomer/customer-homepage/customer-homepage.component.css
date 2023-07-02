@@ -59,3 +59,11 @@
 .search-container:hover{
   animation: hoverShake 0.15s linear 3;
 }
+
+
+/* to make footer at bottom */
+app-footer{
+    position:static;
+    bottom: 0;
+    width: 100%;
+}

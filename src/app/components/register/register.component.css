@@ -1,0 +1,9 @@
+#formdiv{
+    background: url("../../../assets/hotel4.jpg");
+}
+#form{
+    margin: auto;
+}
+.form-group{
+    padding: 4px;
+}
