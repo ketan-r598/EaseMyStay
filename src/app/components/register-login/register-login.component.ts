@@ -56,11 +56,11 @@ export class RegisterLoginComponent {
     this.userService.loginUser(this.userLogin).subscribe(data => {
       console.log(data);
       // this.user = data;
-      if(data.role != null) {
-        this.goToDashboard(data.role);
-      } else {
-        alert("invalid credentials");
-      }
+      // if(data.role != null) {
+      //   this.goToDashboard(data.role);
+      // } else {
+      //   alert("invalid credentials");
+      // }
     },
       error => console.log(error)
     );

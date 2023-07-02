@@ -10,35 +10,43 @@
                 <form (ngSubmit)="onSubmit()" >
                     <div class="form-group">
                         <label>First Name</label>
-                        <input type="text" class="form-control" id="firstName"  
+                        <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName"
                         name="firstName" placeholder="Enter your First name">
                     </div>
                     <div class="form-group">
                         <label>Last Name</label>
-                        <input type="text" class="form-control" id="lname" 
-                        name="lname">
+                        <input type="text" class="form-control" id="lastName" 
+                        name="lastName" [(ngModel)]="user.lastName">
                     </div>
                     <div class="form-group">
                         <label>Contact</label>
-                        <input type="text" class="form-control" id="contact" 
-                        name="contact">
+                        <input type="text" class="form-control" id="contactNumber" [(ngModel)]="user.contactNumber"
+                        name="contactNumber">
                     </div>
                     <div class="form-group">
-                        <label>City</label>
-                        <input type="text" class="form-control" id="city" 
-                        name="city">
+                        <label>State</label>
+                        <input type="text" class="form-control" id="address" [(ngModel)]="user.address" 
+                        name="address">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" id="email"  
+                        <input type="email" class="form-control" id="email" [(ngModel)]="user.email"  
                         name="email">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" id="password" 
+                        <input type="password" class="form-control" id="password" [(ngModel)]="user.password"
                         name="password">
                     </div>
-
+                    <br/>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select  class="form-control chosen-select form-select" aria-label=" Default select example" name="role" id="role" [(ngModel)]="user.role">
+                            <!-- <option value="" disabled selected>Role</option> -->
+                            <option value="user" selected>User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
                     <br/>
                     <button class="btn btn-success" type="submit">Submit</button>
                 </form>

@@ -10,7 +10,7 @@ import { UserCredentialsModel } from '../models/user-credentials-model';
 
 export class UserService {
 
-  private baseURL = "http://localhost:8800/users";
+  private baseURL = "http://localhost:9910/users";
 
   constructor( private httpClient : HttpClient) { }
 
@@ -22,8 +22,8 @@ export class UserService {
     return this.httpClient.put(`${this.baseURL}/update`,user);
   }
 
-  loginUser(user:UserCredentialsModel) : Observable<UserModel> {
-    return this.httpClient.post<UserModel>(`${this.baseURL}/login`,user);
+  loginUser(user:UserCredentialsModel) : Observable<Object> {
+    return this.httpClient.post(`${this.baseURL}/login`,user);
   }
 
   // Needs to be Changed
