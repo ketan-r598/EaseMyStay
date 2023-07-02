@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-admin',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarAdminComponent {
 
+  constructor(
+    private router: Router
+  ) {}
+
+  logOut():void {
+    localStorage.clear();
+    this.router.navigate(['/login']);
+  }
 }
