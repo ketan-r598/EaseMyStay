@@ -4,3 +4,10 @@
     background: linear-gradient(to bottom right, blue ,pink);
     font-size: large;
 }
+
+/* to make footer at bottom */
+app-footer{
+    position:static;
+    bottom: 0;
+    width: 100%;
+}
