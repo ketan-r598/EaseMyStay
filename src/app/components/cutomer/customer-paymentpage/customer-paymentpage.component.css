@@ -62,3 +62,14 @@ button:focus {
     box-shadow: none !important;
     outline-width: 0
 }
+
+/* added styles to dropdown */
+select{
+    padding: 10px 15px;
+    border-radius: 5px !important;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 20px !important;
+    font-weight: 300
+}

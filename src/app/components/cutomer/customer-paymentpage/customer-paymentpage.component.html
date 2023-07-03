@@ -14,36 +14,51 @@
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Hotel Name<span class="text-danger"> *</span></label>
-                            <input type="text" id="hotelName" name="hotelName" class="form-control"
-                                [value]="hotelName" readonly>
+                            <input type="text" id="hotelName" name="hotelName" class="form-control" [value]="hotelName"
+                                readonly>
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Guests<span class="text-danger"> *</span></label> <input
-                                type="number" id="guests" name="guests" class="form-control" [value]="booking.numberOfGuests" readonly>
+                                type="number" id="guests" name="guests" class="form-control"
+                                [value]="booking.numberOfGuests" readonly>
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Rooms<span class="text-danger"> *</span></label>
-                            <input type="number" id="rooms" class="form-control" name="rooms" [value]="booking.numberOfRooms" readonly>
+                            <input type="number" id="rooms" class="form-control" name="rooms"
+                                [value]="booking.numberOfRooms" readonly>
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Amount<span class="text-danger"> *</span></label> <input
-                                type="number" id="amount" name="amount" class="form-control" [value]="booking.amount" readonly>
+                                type="number" id="amount" name="amount" class="form-control" [value]="booking.amount"
+                                readonly>
                         </div>
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Mode
+                        <!-- <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Mode
                                 of Payment<span class="text-danger"> *</span></label>
                             <input type="text" id="paymentMethod" class="form-control" name="paymentMethod"
                                 placeholder="" value="UPI" [(ngModel)]="payment.paymentMethod">
+                        </div> -->
+
+                        <!-- changed text to dropdown -->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Mode
+                                of Payment<span class="text-danger"> *</span></label>
+                            <select name="paymentMethod" id="paymentMethod" class="form-control"
+                                [(ngModel)]="payment.paymentMethod">
+                                <option value="cards"> Cards</option>
+                                <option value="UPI"> UPI</option>
+                                <option value="cas"> Cash</option>
+                            </select>
                         </div>
-                    </div>
 
 
-                    <div class="row justify-content-end text-center">
-                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Pay and
-                                Book Hotel</button> </div>
+                        <div class="row justify-content-end text-center">
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Pay
+                                    and
+                                    Book Hotel</button> </div>
+                        </div>
                     </div>
                 </form>
             </div>
