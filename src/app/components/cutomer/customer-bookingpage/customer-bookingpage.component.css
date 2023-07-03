@@ -6,9 +6,11 @@
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
 }
 
+/* changed margin bottom */
 #form{
     padding-bottom: 0px;
     margin-bottom: 0px;
+    height: 550px;
     background: url("../../../../assets/hotel1.jpg");
 }
 #heading{
@@ -61,4 +63,9 @@ button:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     outline-width: 0
+}
+app-footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }

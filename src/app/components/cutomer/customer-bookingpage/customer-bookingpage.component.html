@@ -9,12 +9,14 @@
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Check In Date<span class="text-danger"> *</span></label>
-                            <input type="datetime-local" id="checkInDate" class="form-control" name="checkInDate"
+                                <!-- made date time to only date -->
+                            <input type="date" id="checkInDate" class="form-control" name="checkInDate"
                                 required [(ngModel)]="checkInDate">
                         </div>
+                        <!-- made date time to only date -->
                         <div class="form-group col-sm-6 flex-column d-flex"> <label
                                 class="form-control-label px-3">Check Out Date<span class="text-danger">
-                                    *</span></label> <input type="datetime-local" id="checkOutDate" name="checkOutDate"
+                                    *</span></label> <input type="date" id="checkOutDate" name="checkOutDate"
                                 class="form-control" required [(ngModel)]="checkOutDate">
                         </div>
                     </div>

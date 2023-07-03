@@ -13,7 +13,7 @@ export class AdminHomepageComponent {
 
   hotels: any;
   // hotel: HotelModel = new HotelModel();
-  // hotelNumber:boolean=0;
+  hotelNumber:boolean=false;
 
   constructor(
     private hotelService: HotelServiceService,
@@ -31,6 +31,14 @@ export class AdminHomepageComponent {
       (data: any) => {
         console.log(data);
         this.hotels=data;
+        console.log(this.hotels.length);
+        if(this.hotels.length > 0){
+          this.hotelNumber = true;
+          console.log(this.hotels.length);
+        }
+        else{
+          this.hotelNumber = false;
+        }
       },
 
       error => {

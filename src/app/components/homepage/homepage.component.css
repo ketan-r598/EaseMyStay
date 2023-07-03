@@ -10,3 +10,17 @@ footer{
     margin-top: 0;
    
 }
+
+/* welcome msg styles */
+#welcome{
+    /* color:peachpuff; */
+    color: black;
+    background-color:aquamarine;
+    opacity: 0.6;
+    position:fixed;
+    top: 80px;
+    z-index: 999;
+}
+#stay{
+    color: red;
+}

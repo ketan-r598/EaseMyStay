@@ -1,17 +1,28 @@
 .body{
-    background: url("../../../../assets/hotel3.jpg");
-    color:aqua
+    background: url("../../../../assets/room1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    color:black;
+    /* made changes to above color */
 }
 table,td,th{
     border: 3px solid;
+    text-align: center;
+    font-weight:bolder;
    
 }
 table{
     width:60%;
     border-collapse:collapse;
-   
+    font-size: 20px;
+
 }
-/* tr:nth-child(even) {background-color: #f2f2f2;} */
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+
 #left{
     width: 35%;
     padding: 8px;
@@ -23,7 +34,8 @@ table{
     text-align: center;
     /* background: linear-gradient(to bottom right, blue ,pink); */
     font-size: large;
-    color: yellow;
+    color:brown;
+    /* made changes to above color */
 }
 #center{
     margin-left: auto;
