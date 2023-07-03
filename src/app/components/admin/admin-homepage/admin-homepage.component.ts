@@ -13,6 +13,7 @@ export class AdminHomepageComponent {
 
   hotels: any;
   // hotel: HotelModel = new HotelModel();
+  // hotelNumber:boolean=0;
 
   constructor(
     private hotelService: HotelServiceService,
