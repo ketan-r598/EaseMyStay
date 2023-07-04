@@ -39,7 +39,7 @@
 <div *ngIf=!(hotelNumber) class="nohotels text-danger"> Oops!! No Hotels found</div>
 <div class="card" style="width: 100%; height: fit-content;">
     <div class="row g-0 ">
-        <div class="col-sm-4 text-bg-secondary d-inline-block border-right-4 mb-1 ms-1 me-1 " *ngFor="let h of hotel">
+        <div class="col-sm-4 text-bg-secondary d-inline-block  " *ngFor="let h of hotel">
             <div class="card-body ">
                 <h5 class="card-title">{{h.hotelName}}
                 </h5>
@@ -61,10 +61,9 @@
     <h3 style="text-align: center;">Your Bookings</h3>
     <div *ngIf=!(bookingsNumber) class="nobookings text-danger"> Oops!! No Bookings found</div>
     <div class="row g-0">
-        <div class="col-sm-4 text-bg-secondary d-inline-block mb-1 ms-1 me-1" *ngFor="let b of bookings">
-            <div class="card-body ">
-                <h5 class="card-title"> Total Sum : {{b.amount}}/- Rs
-                </h5>
+        <div class="col-sm-4 text-bg-secondary d-inline-block" *ngFor="let b of bookings">
+            <div class="card-body">
+                <p class="card-title"> Total Sum : {{b.amount}}/- Rs </p>
                 <p class="card-text">{{"Check In: " + b.checkInDate}}</p>
                 <p class="card-text">{{"Check Out: " + b.checkOutDate}}</p>
                 <p class="card-text">{{"Status: " + " Confirmed"}}</p>
