@@ -142,3 +142,9 @@ app-footer {
     color:white;
     background-color: black;
 }
+.card-body{
+    padding: 10px;
+}
+.card{
+    border-radius: 5px; /* 5px rounded corners */
+}
