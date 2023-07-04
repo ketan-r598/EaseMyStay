@@ -16,8 +16,8 @@ export class CustomerHomepageComponent {
   bookings: any;
   city: any;
   hotelName: any;
-  hotelNumber:boolean=false;
-  bookingsNumber:boolean=false;
+  hotelNumber: boolean = false;
+  bookingsNumber: boolean = false;
 
   constructor(
     private router: Router,
@@ -33,17 +33,12 @@ export class CustomerHomepageComponent {
       (data) => {
         console.log(data);
         this.bookings = data;
-        if(this.hotel.length > 0){
-          this.hotelNumber = true;
-          console.log(this.hotelNumber);
-        }else{
-          this.hotelNumber = false;
-        }
-        if(this.bookings.length > 0){
+
+        if (this.bookings.length > 0) {
           this.bookingsNumber = true;
           console.log(this.bookingsNumber);
         }
-        else{
+        else {
           this.bookingsNumber = false;
         }
       },
@@ -80,6 +75,14 @@ export class CustomerHomepageComponent {
       (data: any) => {
         console.log(data);
         this.hotel = data;
+        if(this.hotel.length > 0)
+        {
+          this.hotelNumber = true;
+          console.log(this.hotelNumber)
+        }
+        else{
+          this.hotelNumber = false;
+        }
       },
       error => {
         console.log(error);

@@ -22,7 +22,7 @@
 
                 <div class="search">
                     <i class="fa fa-search"></i>
-                    <input type="text" class="form-control" placeholder="Search Hotels by City" [(ngModel)]="city" >
+                    <input type="text" class="form-control" placeholder="Search Hotels by City" [(ngModel)]="city">
                     <button class="btn btn-primary" (click)="search()">Search</button>
                 </div>
 
@@ -37,17 +37,17 @@
 
 <!-- hotel results  -->
 <div *ngIf=!(hotelNumber) class="nohotels text-danger"> Oops!! No Hotels found</div>
-<div class="card mt-0 mb-0" style="width: 100%; height: fit-content;">
-    <div class="row g-0">
-        <div class="col-sm-4 text-bg-secondary d-inline-block" *ngFor="let h of hotel">
+<div class="card" style="width: 100%; height: fit-content;">
+    <div class="row g-0 ">
+        <div class="col-sm-4 text-bg-secondary d-inline-block border-right-4 mb-1 ms-1 me-1 " *ngFor="let h of hotel">
             <div class="card-body ">
                 <h5 class="card-title">{{h.hotelName}}
                 </h5>
                 <p class="card-text">{{h.city + "," + h.email}}</p>
 
-                <button class="navbar-brand mx-1" href="#" routerLinkActive="active" (click)="book(h.hotelId)">
-                    <img src="../../../../assets/bookhotel.jpg" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top" id="bookhotel"> Book Hotel
+                <button id="bookhotel" class="navbar-brand mx-1" href="#" routerLinkActive="active" (click)="book(h.hotelId)">
+                    <img  src="../../../../assets/bookhotel.jpg" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top bg-primary" > Book Hotel
                 </button>
             </div>
         </div>
@@ -57,13 +57,13 @@
 
 <!-- bookings -->
 
-<div class="card mt-0 mb-0" style="width: 100%; height: fit-content;">
+<div class="card mb-1 ms-1 me-1" style="width: 100%; height: fit-content;">
     <h3 style="text-align: center;">Your Bookings</h3>
     <div *ngIf=!(bookingsNumber) class="nobookings text-danger"> Oops!! No Bookings found</div>
     <div class="row g-0">
         <div class="col-sm-4 text-bg-secondary d-inline-block" *ngFor="let b of bookings">
             <div class="card-body ">
-                <h5 class="card-title">{{hotelName}}
+                <h5 class="card-title"> Total Sum : {{b.amount}}/- Rs
                 </h5>
                 <p class="card-text">{{"Check In: " + b.checkInDate}}</p>
                 <p class="card-text">{{"Check Out: " + b.checkOutDate}}</p>
