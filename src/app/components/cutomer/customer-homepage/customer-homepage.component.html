@@ -57,11 +57,11 @@
 
 <!-- bookings -->
 
-<div class="card mb-1 ms-1 me-1" style="width: 100%; height: fit-content;">
+<div class="card " style="width: 100%; height: fit-content;">
     <h3 style="text-align: center;">Your Bookings</h3>
     <div *ngIf=!(bookingsNumber) class="nobookings text-danger"> Oops!! No Bookings found</div>
     <div class="row g-0">
-        <div class="col-sm-4 text-bg-secondary d-inline-block" *ngFor="let b of bookings">
+        <div class="col-sm-4 text-bg-secondary d-inline-block mb-1 ms-1 me-1" *ngFor="let b of bookings">
             <div class="card-body ">
                 <h5 class="card-title"> Total Sum : {{b.amount}}/- Rs
                 </h5>
